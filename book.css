@@ -1,0 +1,155 @@
+:root{
+    --font-family:"sohne-var","Helvetica Neue","Arial",sans-serif;
+    --font-size:1.2rem;
+    --text-cap:capitalize;
+    --navbar-weight:600;
+    --text-color:rgb(255, 255, 255);
+    --background-color:linear-gradient(to right, #2F80ED, #56CCF2);
+
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* Navbar css start from here  */
+header{
+    background:var(--background-color);
+    background-size: cover;
+}
+.navbar>div{
+    font-family: var(--font-family);
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding:  20px 0px; 
+    cursor: pointer;
+
+}
+.name{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:var(--text-color);
+    text-decoration: none;
+}
+
+.center a{
+    font-size: var(--font-size);
+    margin-left:30px;
+    margin-right: 30px; 
+    text-transform: var(--text-cap);
+    /* transition-property: color,opacity; */
+    font-weight:var(--navbar-weight);
+    color:var(--text-color)
+}
+a{
+    text-decoration: none;
+}
+.center a:hover{
+    opacity: 0.7;
+}
+.right a:hover{
+    opacity: 0.7;
+}
+.right{
+    font-size: var(--font-size);
+    text-transform: var(--text-cap);
+    font-weight: var(--navbar-weight);
+    color:var(--text-color);
+    
+}
+.sign{
+    display: block;
+    position: relative;
+    /* background-color: #ffff; */
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #ffff !important;
+}
+
+.line{
+    position: absolute;
+    top: 15px;
+    right:-22px; 
+    height: 2px;
+    width: 20px;
+    background-color: #ffff;
+    transform: width 300ms ease-in;
+    transform-origin: right;
+    
+}
+.line::before{
+    content: " ";
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top:-3px;
+    right:-2px;
+    transform: rotate(45deg);
+}
+.line::after{
+    content: " ";
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top:3px;
+    right:-2px;
+    transform: rotate(-45deg);
+
+}
+.line:hover{
+    width:40px;
+}  
+
+
+@media screen and (max-width:768px) {
+    .center a{
+        margin-left: 2px;
+        margin-right: 20px;
+        font-size: 1rem;
+    }    
+}
+
+/* #main section start from here */
+
+main{
+    background: var(--background-color);
+    line-height: 100px;
+}
+.inputs{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+input[type=text]{
+    height: 30px;
+    width:200px;
+    border:1px solid black;
+    background:var(--background-color);
+    outline: none;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+.inputs>*{
+    margin-right: 30px;
+}
+.swipe{
+    height: 30px;
+    width: 30px;
+}
+input[type=submit]{
+    border:1px solid black;
+    background: #56CCF2;
+    padding: 5px 20px;
+    color: #ffff;
+    font-family: var(--font-family);
+    border-radius: 10px;
+}
+input::placeholder{
+    color: #ffff;
+}
